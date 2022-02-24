@@ -13,6 +13,7 @@
                 "${workspaceFolder}/bsp/int",
                 "${workspaceFolder}/bsp/exti",
                 "${workspaceFolder}/bsp/epit",
+                "${workspaceFolder}/bsp/uart",
                 "${workspaceFolder}/imx6u",
                 "${workspaceFolder}/project"
             ],

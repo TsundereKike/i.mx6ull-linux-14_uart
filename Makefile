@@ -1,5 +1,5 @@
 CROSS_COPILE ?= arm-linux-gnueabihf-
-TARGET 		 ?= gpt_delay
+TARGET 		 ?= uart
 
 CC			 := $(CROSS_COPILE)gcc
 LD			 := $(CROSS_COPILE)ld
@@ -15,7 +15,8 @@ INCUDIRS	:= imx6u \
 			   bsp/gpio \
 			   bsp/int \
 			   bsp/exti \
-			   bsp/epit
+			   bsp/epit \
+			   bsp/uart
 
 SRCDIRS		:= project \
 			   bsp/clk \
@@ -26,7 +27,8 @@ SRCDIRS		:= project \
 			   bsp/gpio \
 			   bsp/int \
 			   bsp/exti \
-			   bsp/epit
+			   bsp/epit \
+			   bsp/uart
 
 INCLUDE		:= $(patsubst %, -I %, $(INCUDIRS))
 
