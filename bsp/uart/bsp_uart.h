@@ -5,7 +5,9 @@ void uart_init(void);
 void uart_disable(UART_Type *base);
 void uart_enable(UART_Type *base);
 void uart_soft_reset(UART_Type *base);
-void uart1_putc(unsigned char c);
-unsigned char uart1_getc(void);
-void uart1_puts(char *str);
+void uart_setbaudrate(UART_Type *base, unsigned int baudrate, unsigned int srcclock_hz);
+void putc(unsigned char c);
+unsigned char getc(void);
+void puts(char *str);
+void raise(int sig_nr);
 #endif 

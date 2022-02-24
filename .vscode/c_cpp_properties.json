@@ -15,7 +15,8 @@
                 "${workspaceFolder}/bsp/epit",
                 "${workspaceFolder}/bsp/uart",
                 "${workspaceFolder}/imx6u",
-                "${workspaceFolder}/project"
+                "${workspaceFolder}/project",
+                "${workspaceFolder}/stdio/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

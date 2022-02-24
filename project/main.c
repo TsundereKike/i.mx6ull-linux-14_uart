@@ -8,8 +8,9 @@
 #include "bsp_exti.h"
 #include "bsp_epit.h"
 #include "bsp_uart.h"
+#include "stdio.h"
 static unsigned char led_state = OFF;
-unsigned char a = 0;
+unsigned int a,b;
 int main(void)
 {
     int_init();
@@ -28,16 +29,21 @@ int main(void)
         led_state = !led_state;
         led_switch(LED0,led_state);
         delay_ms(100);
-        */
-        uart1_puts("请输入一个字符:");
-        a = uart1_getc();
-        uart1_putc(a); //发送输入的字符
-        uart1_puts("\r\n");
-
-        uart1_puts("您输入的字符为:");
-        uart1_putc(a);
-        uart1_puts("\r\n");
         
+        puts("请输入一个字符:");
+        a = getc();
+        putc(a); //发送输入的字符
+        puts("\r\n");
+
+        puts("您输入的字符为:");
+        putc(a);
+        puts("\r\n");
+        */
+       printf("请输入两个整数，并使用空格隔开：");
+       scanf("%d %d",&a,&b);
+       printf("\r\n%d + %d = %d\r\n",a,b,a+b);
+
+       printf("%d的十六进制是%#x\r\n",a+b,a+b);
     }
     return 0;
 }
